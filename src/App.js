@@ -2,15 +2,15 @@
 import { useState } from 'react';
 import './App.css';
 import Alert from './Components/Alert';
-import About from './Components/About';
+// import About from './Components/About';
 import Navbar from './Components/Navbar';
 import TextForm from './Components/TextForm';
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  Link
-} from "react-router-dom";
+// import {
+//   BrowserRouter as Router,
+//   Routes,
+//   Route,
+//   Link
+// } from "react-router-dom";
 
 function App() {
 
@@ -63,21 +63,21 @@ function App() {
   }
   return (
     <>
-    <Router>
+    {/* <Router> */}
       <Navbar title = "TextUtils" bgMode = {bgMode} txtMode={txtMode} btnMode = {btnMode} toggleTheme = {toggleTheme}/>
       <Alert alert = {alert} />
       <div className="container">
-      <Routes>
+      {/* <Routes>
           <Route path="/about" element={<About bgMode={bgMode} txtMode = {txtMode} btnMode = {btnMode}/>}>
-          </Route>
-          <Route path="/" element={<TextForm heading="Enter text to be analyzed below" showAlert={showAlert} bgMode={bgMode} txtMode = {txtMode} btnMode = {btnMode}/>}>
-          
-          </Route>
+          </Route> */}
+
+          <TextForm heading="Enter text to be analyzed below" showAlert={showAlert} bgMode={bgMode} txtMode = {txtMode} btnMode = {btnMode}/>
+          {/* </Route>
         </Routes>
-     
+      */}
       
       </div>
-      </Router>
+      {/* </Router> */}
     </>
   );
 }
